@@ -2,7 +2,7 @@ const fetch = require('node-fetch').default;
 
 module.exports = async function (context, req) {
     const user = req.body || {};
-    const roles = getUserGroups(user);
+    const roles = await getUserGroups(user);
 
     context.res.json({
         roles
