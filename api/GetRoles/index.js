@@ -25,6 +25,6 @@ async function getUserGroups(bearerToken) {
     const graphResponse = await response.json();
     const groups = graphResponse.value.map(group => group.displayName);
 
-    console.log(roles);
+    console.log(groups);
     return groups;
 }
