@@ -9,7 +9,6 @@
             "allowedRoles": [ "authenticated" ]
         }
     ],
-    {
     "auth": {
         "identityProviders": {
           "azureActiveDirectory": {
@@ -20,7 +19,6 @@
             }
           }
         }
-      }
     },
     "globalHeaders": {
         "Cache-Control": "no-cache"
