@@ -5,12 +5,8 @@ module.exports = async function (context, req) {
     const roles = getUserGroups(user);
 
     context.res.json({
-        roles: ["admin"]
-    })
-
-    //context.res.json({
-    //    roles
-    //});
+        roles
+    });
 }
 
 async function getUserGroups(bearerToken) {
@@ -28,5 +24,7 @@ async function getUserGroups(bearerToken) {
 
     const graphResponse = await response.json();
     const groups = graphResponse.value.map(group => group.displayName);
+
+    console.log(roles);
     return groups;
 }
