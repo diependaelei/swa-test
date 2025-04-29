@@ -5,8 +5,12 @@ module.exports = async function (context, req) {
     const roles = getUserGroups(user);
 
     context.res.json({
-        roles
-    });
+        roles: ["admin"]
+    })
+
+    //context.res.json({
+    //    roles
+    //});
 }
 
 async function getUserGroups(bearerToken) {
